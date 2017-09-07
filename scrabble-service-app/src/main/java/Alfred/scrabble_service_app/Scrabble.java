@@ -18,7 +18,7 @@ public class Scrabble {
 		
 		 String Letters = searchLetters(letterList);
 		 permute("",Letters);
-		 
+
 		 for(String word : possibleWords){
 			 if(dictionaryService.searchWord(word)) return word;
 		 }

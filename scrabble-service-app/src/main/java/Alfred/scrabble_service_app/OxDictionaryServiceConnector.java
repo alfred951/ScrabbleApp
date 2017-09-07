@@ -23,7 +23,8 @@ public final class OxDictionaryServiceConnector {
             urlConnection.setRequestProperty("Accept","application/json");
             urlConnection.setRequestProperty("app_id",app_id);
             urlConnection.setRequestProperty("app_key",app_key);
-            urlConnection.getResponseCode();
+            urlConnection.getInputStream();
+
             return true;
         }
         catch (Exception e) {

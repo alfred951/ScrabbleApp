@@ -24,7 +24,6 @@ public class ScrabbleAll {
 		 for(String word : possibleWords){
 			 if(dictionaryService.searchWord(word)) existingWords.add(word);
 		 }
-		 
 		 return existingWords; 
 	}
 	
@@ -44,13 +43,11 @@ public class ScrabbleAll {
 	private void permute(String prefix, String letters) {
 	    int n = letters.length();
 	    if (n == 0 && !possibleWords.contains(prefix)){ 
-	    	System.out.println("añadiendo: "+prefix);
 	    	possibleWords.add(prefix);
 	    }
 	    else {
 	        for (int i = 0; i < n; i++){
 	        	if(!prefix.isEmpty() && !possibleWords.contains(prefix)){
-	        		System.out.println("añadiendo: "+prefix);
 	        		possibleWords.add(prefix);
 	        	}
 	            permute(prefix + letters.charAt(i), letters.substring(0, i) + letters.substring(i+1, n));
